@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Magento Custom Module
+ * To display the top 100 most viewed gifts on a single, responsive page
+ *
+ * @category    TF
+ * @package     TF_TopGifts
+ * @copyright   
+ * @license     Free Distribution
+ */
+ 
+ /**
+ * Configuration
+ *
+ * @version    1.0
+ * @author     Shawn Wang (shawn.wang.uk@gmail.com)
+ */
+-->
+<config>    
+    <modules>
+        <TF_TopGifts>
+            <version>0.1.0</version>
+        </TF_TopGifts>
+    </modules>
+    
+    <frontend>
+        <routers>
+            <topgifts>
+                <use>standard</use>
+                <args>
+                    <module>TF_TopGifts</module>
+                    <frontName>topgifts</frontName>
+                </args>
+            </topgifts>
+        </routers>  
+    </frontend>
+    
+    <!-- ... -->
+    <global>
+        <!-- ... -->
+        <helpers>
+            <helloworld>
+                <class>TF_TopGifts_Helper</class>
+            </helloworld>
+        </helpers>  
+        <!-- ... -->
+        
+        <models>
+            <!-- ... -->
+            <helloworld>
+                <class>TF_TopGifts_Model</class>
+            </helloworld>   
+            <!-- ... -->
+        </models>
+        
+    </global>
+    <!-- ... -->    
+
+    
+</config> 
