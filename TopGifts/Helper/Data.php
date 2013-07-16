@@ -11,7 +11,7 @@
  */
  
  /**
- * Toproducts data helper
+ * TopGists data helper
  *
  * @version    1.0
  * @author     Shawn Wang (shawn.wang.uk@gmail.com)

@@ -34,28 +34,39 @@
                 </args>
             </topgifts>
         </routers>  
-    </frontend>
+        
+        <layout>
+            <updates>
+                <tf_topgifts>
+                    <file>tf/topgifts.xml</file>
+                </tf_topgifts>
+            </updates>
+        </layout>
+      </frontend>
     
-    <!-- ... -->
+    
     <global>
-        <!-- ... -->
+        
         <helpers>
-            <helloworld>
+            <topgifts>
                 <class>TF_TopGifts_Helper</class>
-            </helloworld>
+            </topgifts>
         </helpers>  
-        <!-- ... -->
+        
         
         <models>
-            <!-- ... -->
-            <helloworld>
+            <topgifts>
                 <class>TF_TopGifts_Model</class>
-            </helloworld>   
-            <!-- ... -->
+            </topgifts>   
         </models>
-        
+
+        <blocks>
+            <topgifts>
+                <class>TF_TopGifts_Block</class>
+            </topgifts>   
+        </blocks>        
     </global>
-    <!-- ... -->    
+        
 
     
 </config> 

@@ -17,8 +17,11 @@
  * @author     Shawn Wang (shawn.wang.uk@gmail.com)
  */
 class TF_TopGifts_IndexController extends Mage_Core_Controller_Front_Action {        
-    public function indexAction() {
-        echo 'Hello Index!';
+   /**
+   * index action 
+   */
+   public function indexAction() {
+      $this->loadLayout()->renderLayout();
     }
   
 }
