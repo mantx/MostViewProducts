@@ -22,8 +22,29 @@ class TF_TopGifts_IndexController extends Mage_Core_Controller_Front_Action {
    */
    public function indexAction() {
       $this->loadLayout()->renderLayout();
-    }
-  
+   }
+
+   /**
+   * list action 
+   */
+   public function listAction() {
+      $this->loadLayout()->renderLayout();
+   }
+
+   /**
+   * grid action 
+   */
+   public function gridAction() {
+      $this->loadLayout()->renderLayout();
+   }
+
+   /**
+   * default action and using catalog default render
+   */
+   public function defaultrenderAction() {
+      $this->loadLayout()->renderLayout();
+   }
+   
 }
 
 ?>
