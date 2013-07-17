@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Magento Custom Module
+ * To display the top 100 most viewed gifts on a single, responsive page
+ *
+ * @category    TF
+ * @package     TF_TopGifts
+ * @copyright   
+ * @license     Free Distribution
+ */
+ 
+ /**
+ * Layout Update handle for topgifts_index_index
+ *
+ * @version    1.0
+ * @author     Shawn Wang (shawn.wang.uk@gmail.com)
+ */
+-->
+<layout version="0.1.0">
+  <!-- Add custom css -->
+  <STORE_default>
+    <reference name="head">
+      <action method="addCss"><stylesheet>css/tf/topgifts.css</stylesheet></action>
+    </reference>
+  </STORE_default>
+  
+  <topgifts_index_index>
+    <reference name="content">
+      <block type="topgifts/list"  name="topgifts.product.list" template="tf/topgifts.phtml">
+        <block type="catalog/product_list_toolbar" name="product_list_toolbar">
+          <block type="page/html_pager" name="product_list_toolbar_pager"/>
+          <action method="setAvailableOrders"><p1><views>Views</views><price>Price</price></p1></action>
+        </block>
+        <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+      </block>         	
+    </reference>
+  </topgifts_index_index>
+
+  <topgifts_index_grid>
+    <reference name="content">
+      <block type="topgifts/list"  name="topgifts.product.list" template="tf/topgifts_grid.phtml">
+        <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+      </block>         	
+    </reference>
+  </topgifts_index_grid>
+
+  <topgifts_index_list>
+    <reference name="content">
+      <block type="topgifts/list"  name="topgifts.product.list" template="tf/topgifts_list.phtml">
+        <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+      </block>         	
+    </reference>
+  </topgifts_index_list>
+
+  <topgifts_index_defaultrender>
+    <reference name="content">
+      <block type="topgifts/list" name="topgifts.product.list" template="catalog/product/list.phtml">
+        <block type="catalog/product_list_toolbar" name="product_list_toolbar">
+          <block type="page/html_pager" name="product_list_toolbar_pager"/>
+        </block>
+        <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+        <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+        <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+      </block>
+    </reference>
+  </topgifts_index_defaultrender>
+</layout>

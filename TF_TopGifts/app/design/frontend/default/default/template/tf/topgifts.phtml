@@ -1,0 +1,35 @@
+<?php
+/**
+ * Magento Custom Module
+ * To display the top 100 most viewed gifts on a single, responsive page
+ *
+ * @category    TF
+ * @package     TF_TopGifts
+ * @copyright   
+ * @license     Free Distribution
+ */
+?>
+<?php
+/**
+ * Template with Pagination for TF_TopGifts_Block_List
+ */
+?>
+<?php $_productCollection=$this->getLoadedProductCollection() ?>
+<div class="topgifts">
+  <div class="block-title">
+      <strong><span><?php echo $this->__('100 Top Gifts') ?></span></strong>
+  </div>
+
+  <div class="category-products">
+    <?php echo $this->getToolbarHtml() ?>
+    <?php // List mode ?>
+    <?php if($this->getMode()=='list'): ?>
+      <?php echo $this->renderChildView("tf/topgifts_list.phtml") ?>
+    <?php else: ?>
+      <?php echo $this->renderChildView("tf/topgifts_grid.phtml") ?>
+    <?php endif ?>
+    <?php echo $this->getToolbarHtml() ?>
+  
+  </div>    
+</div>
+

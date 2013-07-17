@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento Custom Module
+ * To display the top 100 most viewed gifts on a single, responsive page
+ *
+ * @category    TF
+ * @package     TF_TopGifts
+ * @copyright   
+ * @license     Free Distribution
+ */
+ 
+ /**
+ * Configuration
+ *
+ * @version    1.0
+ * @author     Shawn Wang (shawn.wang.uk@gmail.com)
+ */
+-->
+<config>
+  <modules>
+    <TF_TopGifts>
+      <active>true</active>
+      <codePool>local</codePool>
+    </TF_TopGifts>
+  </modules>
+
+
+</config>
