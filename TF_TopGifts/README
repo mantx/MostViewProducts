@@ -1,8 +1,11 @@
 This Magento module which display the top 100 most viewed gifts on a single, responsive page
 
-This Magento module is developed in Magento EE 1.7
+This Magento module was developed in Magento EE 1.7
 
-This Magento module work with Magento default theme and as well a responsive theme for a better effect, for example: 
+This Magento module works with Magento default theme and as well a responsive theme for a better effect, for example: 
 http://www.magentocommerce.com/magento-connect/hellowired-free-theme-1-4.html
 
+The access URI: http://yoururl.com/topgifts
+
 Thanks you!
+
