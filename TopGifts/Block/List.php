@@ -24,8 +24,8 @@ class TF_TopGifts_Block_List extends Mage_Catalog_Block_Product_List {
    */
   protected function _getProductCollection() {
     if (is_null($this->_productCollection)) {
-			$storeId    = Mage::app()->getStore()->getId();
-    
+      $storeId    = Mage::app()->getStore()->getId();
+
       //get product collection
       //refer to the class of Mage_Adminhtml_Block_Dashboard_Tab_Products_Viewed
       $products = Mage::getResourceModel('reports/product_collection')
@@ -41,20 +41,27 @@ class TF_TopGifts_Block_List extends Mage_Catalog_Block_Product_List {
       //set limit of record to 100
       $products->setPageSize(100);
       $this->_productCollection = $products;
+    }
+    return $this->_productCollection;
+  }
 
-     }
-     return $this->_productCollection;
-   }
-   
- 
+   /**
+   * render a child view template
+   *
+   * @param void
+   * @return the rendering html code
+   */
   public function renderChildView($template)
   {
+    if ($template == '') $template = $this->getTemplate();
+    
     $this->setScriptPath(Mage::getBaseDir('design'));
     $params = array('_relative'=>true);
     $area = $this->getArea();
     if ($area) {
       $params['_area'] = $area;
     }
+    
     $templateName = Mage::getDesign()->getTemplateFilename($template, $params);
     $html = $this->fetchView($templateName);
     return $html;
